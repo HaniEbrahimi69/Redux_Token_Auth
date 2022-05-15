@@ -1,0 +1,23 @@
+@import-normalize;
+
+body {
+  margin: 0;
+  font-family: IRANSans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("./assets/fonts/IRANSans-Light.eot");
+  src: url("./assets/fonts/IRANSans-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/IRANSans-Light.woff2") format("woff2"),
+    url("./assets/fonts/IRANSans-Light.woff") format("woff"),
+    url("./assets/fonts/IRANSans-Light.svg#IRANSans-Light") format("svg");
+}

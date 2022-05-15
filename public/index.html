@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.icod", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title></title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .linear-progress-native {
+        position: relative;
+        height: 4px;
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 2px;
+        background-clip: padding-box;
+        overflow: hidden;
+      }
+
+      .linear-progress-native .linear-progress-native-indeterminate {
+        background-color: #0066ff;
+      }
+
+      .linear-progress-native .linear-progress-native-indeterminate:before {
+        content: "";
+        position: absolute;
+        background-color: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        will-change: left, right;
+        -webkit-animation: linear-progress-native-indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+        animation: linear-progress-native-indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      }
+
+      .linear-progress-native .linear-progress-native-indeterminate:after {
+        content: "";
+        position: absolute;
+        background-color: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        will-change: left, right;
+        -webkit-animation: linear-progress-native-indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+        animation: linear-progress-native-indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+        -webkit-animation-delay: 1.15s;
+        animation-delay: 1.15s;
+      }
+
+      @-webkit-keyframes linear-progress-native-indeterminate {
+        0% {
+          left: -35%;
+          right: 100%;
+        }
+
+        60% {
+          left: 100%;
+          right: -90%;
+        }
+
+        100% {
+          left: 100%;
+          right: -90%;
+        }
+      }
+
+      @keyframes linear-progress-native-indeterminate {
+        0% {
+          left: -35%;
+          right: 100%;
+        }
+
+        60% {
+          left: 100%;
+          right: -90%;
+        }
+
+        100% {
+          left: 100%;
+          right: -90%;
+        }
+      }
+
+      @-webkit-keyframes linear-progress-native-indeterminate-short {
+        0% {
+          left: -200%;
+          right: 100%;
+        }
+
+        60% {
+          left: 107%;
+          right: -8%;
+        }
+
+        100% {
+          left: 107%;
+          right: -8%;
+        }
+      }
+
+      @keyframes linear-progress-native-indeterminate-short {
+        0% {
+          left: -200%;
+          right: 100%;
+        }
+
+        60% {
+          left: 107%;
+          right: -8%;
+        }
+
+        100% {
+          left: 107%;
+          right: -8%;
+        }
+      }
+    </style>
+    <div class="linear-progress-native">
+      <div class="linear-progress-native-indeterminate" />
+    </div>
+  </div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>
